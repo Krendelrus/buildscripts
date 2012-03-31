@@ -44,53 +44,53 @@ case "$DEVICE" in
 		;;
 	captivatemtd)
 		board=aries
-		lunch=cm_captivatemtd-userdebug
-		brunch=cm_captivatemtd-userdebug
+		lunch=aokp_captivatemtd-userdebug
+		brunch=aokp_captivatemtd-userdebug
 	;;
 	fascinatemtd)
 		board=aries
-		lunch=cm_fascinatemtd-userdebug
-		brunch=cm_fascinatemtd-userdebug
+		lunch=aokp_fascinatemtd-userdebug
+		brunch=aokp_fascinatemtd-userdebug
 		;;
 	galaxys2)
 		board=smdk4210
-		lunch=cm_galaxys2-userdebug
-		brunch=cm_galaxys2-userdebug
+		lunch=aokp_galaxys2-userdebug
+		brunch=aokp_galaxys2-userdebug
 		;;
 	i777)
 		board=smdk4210
-		lunch=cm_i777-userdebug
-		brunch=cm_i777-userdebug
+		lunch=aokp_i777-userdebug
+		brunch=aokp_i777-userdebug
 		;;
 	galaxysl)
 		board=latona
-		lunch=cm_galaxysl-userdebug
-		brunch=cm_galaxysl-userdebug
+		lunch=aokp_galaxysl-userdebug
+		brunch=aokp_galaxysl-userdebug
 		;;
 	galaxynote)
 		board=smdk4210
-		lunch=cm_galaxynote-userdebug
-		brunch=cm_galaxynote-userdebug
+		lunch=aokp_galaxynote-userdebug
+		brunch=aokp_galaxynote-userdebug
 		;;
 	galaxysmtd)
 		board=aries
-		lunch=cm_galaxysmtd-userdebug
-		brunch=cm_galaxysmtd-userdebug
+		lunch=aokp_galaxysmtd-userdebug
+		brunch=aokp_galaxysmtd-userdebug
 		;;
 	galaxysbmtd)
 		board=aries
-		lunch=cm_galaxysbmtd-userdebug
-		brunch=cm_galaxysbmtd-userdebug
+		lunch=aokp_galaxysbmtd-userdebug
+		brunch=aokp_galaxysbmtd-userdebug
 		;;
 	maguro)
 		board=tuna
-		lunch=cm_maguro-userdebug
-		brunch=cm_maguro-userdebug
+		lunch=aokp_maguro-userdebug
+		brunch=aokp_maguro-userdebug
 		;;
 	vibrantmtd)
 	    board=aries
-	    lunch=cm_vibrantmtd-userdebug
-	    brunch=cm_vibrantmtd-userdebug
+	    lunch=aokp_vibrantmtd-userdebug
+	    brunch=aokp_vibrantmtd-userdebug
 	    ;;
 	*)
 		echo -e "${txtred}Usage: $0 DEVICE ADDITIONAL"
@@ -100,17 +100,6 @@ case "$DEVICE" in
 		exit 2
 		;;
 esac
-
-# Check for Prebuilts
-		echo -e "${txtylw}Checking for Prebuilts...${txtrst}"
-if [ ! -e vendor/cm/proprietary/RomManager.apk ] || [ ! -e vendor/cm/proprietary/Term.apk ] || [ ! -e vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm3.so ]; then
-		echo -e "${txtred}Prebuilts not found, downloading now...${txtrst}"
-		cd vendor/cm
-		./get-prebuilts
-		cd ../..
-else
-		echo -e "${txtgrn}Prebuilts found.${txtrst}"
-fi
 
 # Setting up Build Environment
 echo -e "${txtgrn}Setting up Build Environment...${txtrst}"
