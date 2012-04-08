@@ -25,6 +25,7 @@ echo -e "${txtgrn}#                                        #"
 echo -e "${txtgrn}#    TEAMHACKSUNG ANDROID BUILDSCRIPT    #"
 echo -e "${txtgrn}# visit us @ http://www.teamhacksung.org #"
 echo -e "${txtgrn}#                                        #"
+echo -e "${txtgrn}#                 AOKP                   #"
 echo -e "${txtgrn}##########################################"
 echo -e "\r\n ${txtrst}"
 
